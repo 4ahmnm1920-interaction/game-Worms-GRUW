@@ -8,7 +8,8 @@ public class WormsController : MonoBehaviour
     public float jumpForce;
     public float moveForce;
 
-    //public KeyCode test;
+    public KeyCode ShootKey;
+
 
     void Update()
     {
@@ -29,6 +30,11 @@ public class WormsController : MonoBehaviour
         {
             Vector3 force = new Vector3(-moveForce, 0, 0);
             rb.AddForce(force);
+        }
+
+        if (Input.GetKeyDown(ShootKey))
+        {
+            Debug.Log("Pow Pow Pow");
         }
     }
 }
